@@ -1,5 +1,3 @@
-# air-force-hackathon-ai-prototype
-AI prototype for sensor sensitivity adjustment and anomaly/aging detection
 # AI 기반 감지장비 민감도 조정 및 이상 탐지 프로토타입
 
 공군 해커톤 프로젝트로, 감지장비 오탐 감소를 위해 민감도 자동조정과 이상·노후 장비 탐지를 시도한 Python 기반 AI 프로토타입입니다.
