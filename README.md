@@ -47,9 +47,9 @@
 .
 ├── README.md
 ├── models/
-│   ├── sensitivity_model.py
-│   └── anomaly_aging_model.py
+│   ├── 민감도_조정_모델_최종.py
+│   └── 이상+노후화_탐지_모델_최종.py
 ├── docs/
-│   ├── planning.pdf
-│   └── presentation.pdf
+│   ├── 피스아이_기획서.pdf
+│   └── [지정공모][피스아이]발표자료.pdf
 └── assets/
