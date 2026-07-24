@@ -46,10 +46,35 @@
 ```bash
 .
 ├── README.md
-├── models/
+├── models/                  # 최종 모델 코드
 │   ├── 민감도_조정_모델_최종.py
 │   └── 이상+노후화_탐지_모델_최종.py
-├── docs/
-│   ├── 피스아이_기획서.pdf
-│   └── [지정공모][피스아이]발표자료.pdf
-└── assets/
+├── notebooks/               # 실험 과정 (V1 → V2)
+│   ├── 민감도_조정_모델V1.ipynb
+│   ├── 민감도_조정_모델V2.ipynb
+│   ├── 이상치탐지모델V1.ipynb
+│   └── 노후화감지모델V1.ipynb
+├── data/                    # 시뮬레이션 입력 데이터
+│   ├── modeling_data_generated_large.csv
+│   ├── modeling_data.csv
+│   └── realworld_like_raw.csv
+├── results/                 # 실험 결과
+│   ├── results.csv
+│   ├── results_threshold2500.csv
+│   ├── results_threshold2500_2.csv
+│   └── threshold_results3633.csv
+└── docs/                    # 기획 및 발표 자료
+    ├── 피스아이_기획서.pdf
+    └── [지정공모][피스아이]발표자료.pdf
+```
+
+## 실행 참고
+
+- `models/이상+노후화_탐지_모델_최종.py`는 `np.random.default_rng(123)`으로 **데이터를 직접 생성**하므로 별도 입력 파일이 필요 없습니다. 시드가 고정되어 결과가 재현됩니다.
+- `models/민감도_조정_모델_최종.py`는 `data/modeling_data_generated_large.csv`를 입력으로 사용합니다.
+- 스크립트 후반부가 참조하는 `score_expanded_operational.csv`는 이 저장소에 포함되어 있지 않습니다. 해당 구간은 그대로 실행되지 않습니다.
+- 두 스크립트 모두 Colab에서 작성되어 경로가 상대 경로 또는 Colab 경로 기준입니다. 로컬 실행 시 경로 조정이 필요합니다.
+
+## 수상
+
+공군 창의·혁신 아이디어 해커톤 **대상** (2026)
